@@ -35,7 +35,7 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh "scp -i /home/ec2-user/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/home/ec2-user/apache-tomcat-7.0.85/webapps"
+                        sh "scp -i /var/lib/jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/home/ec2-user/apache-tomcat-7.0.85/webapps"
                     }
                 }
             }
